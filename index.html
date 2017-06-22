@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Demo Academia das Brejas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript' src='js/sheetsee.js'></script>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+</head>
+
+<body>
+    <div class="container">
+        <h1><img src="https://scontent.fbfh2-1.fna.fbcdn.net/v/t1.0-9/11694752_692490970856808_1338289826934262850_n.jpg?oh=e89be19ee6883a5e62935e5711f49cbb&oe=59C72613" alt="logo" width="170px"></h1>
+        <input id="fullTableFilter" type="text" placeholder="Filtrar por...">
+        <div id="fullTable">Carregando...</div>
+
+    </div>
+
+    <script id="fullTable_template" type="text/html">
+        <table>
+            <tr>
+                <th class="tHeader">Tipo de Breja</th>
+                <th class="tHeader">Marca</th>
+                <th class="tHeader">300 ml</th>
+                <th class="tHeader">470 ml</th>
+                <th class="tHeader">Veja que Breja!</th>
+            </tr>
+            {{#rows}}
+            <tr>
+                <td>{{tipo}}</td>
+                <td>{{marca}}</td>
+                <td>R$ {{half}}</td>
+                <td>R$ {{pint}}</td>
+                <td><img src="{{foto}}" width="300px" alt="foto da cerveja"></td>
+            </tr>
+            {{/rows}}
+        </table>
+    </script>
+    
+    <footer>
+    
+    
+    
+    </footer>
+
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        var URL = "1W2Zzz7OFro4D4ynvqyG8RYV8UOgeJ0c7iaqW5hU8tAM"
+        Tabletop.init({key: URL, callback: showInfo, simpleSheet: true})
+      })
+
+      function showInfo (data) {
+        var tableOptions = {
+          "data": data,
+          "pagination": 0,
+          "tableDiv": "#fullTable",
+          "filterDiv": "#fullTableFilter"
+        }
+        Sheetsee.makeTable(tableOptions)
+        Sheetsee.initiateTableFilter(tableOptions)
+      }
+    </script>
+</body>
+</html>
