@@ -35,6 +35,11 @@ body {
     width: 250px;
 }
 
+#mapa{
+    width: 100%;
+    max-width: 900px;
+}
+
 .container {
     max-width: 900px;
     margin: 30px auto;
@@ -96,7 +101,7 @@ td {
     vertical-align: top;
     padding: 8px;
     font-size: 1.6em;
-    border-bottom: 5px solid #fff;
+    border-top: 5px solid #fff;
     border-right: 5px solid #fff;
     text-align: center;
     font-family: 'Teko', sans-serif;
@@ -105,6 +110,10 @@ td {
 
 td:nth-child(6){
     border-right: 0px solid #fff;
+}
+
+td:nth-child(2){
+    font-weight: 300
 }
 
 td a {
@@ -128,6 +137,10 @@ tr {
 
 .combo {
     line-height: .9em;
+}
+
+.footer {
+    margin-top: 50px;
 }
 
 /* listas */
@@ -232,6 +245,7 @@ img {
 hr {
     border: 2px solid #fff;
     max-width: 80%;
+    margin-top: 100px;
 }
 
 p {
@@ -306,11 +320,11 @@ h3 code {
 /* funsies */
 
 ::selection {
-    background: #44FFB4;
+    background: #cbcbcb;
 }
 
 ::-moz-selection {
-    background: #44FFB4;
+    background: #cbcbcb;
 }
 
 
