@@ -26,8 +26,8 @@
         
     </div>
 
-    <div class="container">
-        <div id="fullTable">Carregando...</div>
+    <div class="main_container">
+        <div id="fullTable" style="margin:0 auto">Carregando...</div>
         <p>Av. Sen. Souza Naves, 851 - Alto da Rua XV, Curitiba - PR, 80050-152</p>
         <p>(41) 3155-6631</p>
         
@@ -40,18 +40,20 @@
                 <th class="tHeader">Cervejaria</th>
                 <th class="tHeader">Estilo</th>
                 <th class="tHeader">300 ml</th>
-                <th class="tHeader">470 ml</th>
+                <th class="tHeader">470 &nbsp; ml</th>
+                <th class="tHeader">1 &nbsp; Litro</th>
                 <th class="tHeader">Barril</th>
             </tr>
             {{#rows}}
             <tr>
-                <td>{{cervejaria}}
+                <td class="combo"><span class="breja">{{cervejaria}}</span>
                 <br>
                 <span class="local">{{local}}</span>
                 </td>
                 <td>{{estilo}}</td>
                 <td>R$ {{half}}</td>
                 <td>R$ {{pint}}</td>
+                <td>R$ {{growler}}</td>
                 <td><img src="{{foto}}" width="120px" alt="foto da cerveja"></td>
             </tr>
             {{/rows}}
