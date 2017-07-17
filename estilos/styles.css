@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "EraserDust";
-    src: url("fontes/EraserDust.ttf");
+    src: url("../fontes/EraserDust.ttf") format('truetype');
 }
 
 @font-face {
-    font-family: "EraserDust";
-    src: url("fontes/EraserRegular.ttf");
+    font-family: "EraserRegular";
+    src: url("../fontes/EraserRegular.ttf") format('truetype');
 }
 
 body {
@@ -100,11 +100,11 @@ td {
     min-width: 100px;
     vertical-align: top;
     padding: 8px;
-    font-size: 1.6em;
+    font-size: 1.3em;
     border-top: 5px solid #fff;
     border-right: 5px solid #fff;
     text-align: center;
-    font-family: 'Teko', sans-serif;
+    font-family: 'EraserDust';
     vertical-align: middle;
 }
 
@@ -128,11 +128,13 @@ tr {
 .local {
     font-style: italic;
     font-size: .8em;
-    font-weight: 300
+    font-weight: 300;
+    font-family: 'Teko', sans-serif;
 }
 
 .breja{
-    font-weight: 600
+    font-weight: 600;
+    font-family: 'Teko', sans-serif;
 }
 
 .combo {
