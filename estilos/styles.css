@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "EraserDust";
-    src: url("/fontes/EraserDust.ttf");
+    src: url("fontes/EraserDust.ttf");
 }
 
 @font-face {
     font-family: "EraserDust";
-    src: url("/fontes/EraserRegular.ttf");
+    src: url("fontes/EraserRegular.ttf");
 }
 
 body {
