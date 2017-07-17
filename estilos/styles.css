@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Teko:300,400,500,600|Ubuntu+Condensed');
 
 @font-face {
-    font-family: 'EraserDust';
-    src: url('/fontes/EraserDust.ttf');
+    font-family: "EraserDust";
+    src: url("/fontes/EraserDust.ttf");
 }
 
 @font-face {
-    font-family: 'EraserDust';
-    src: url('/fontes/EraserRegular.ttf');
+    font-family: "EraserDust";
+    src: url("/fontes/EraserRegular.ttf");
 }
 
 body {
     font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 18px;
-    /*background-color: #000 !important;*/
     background-image: url("https://github.com/voltdatalab/academia-cervejas/blob/gh-pages/img/backboard.png?raw=true");
     background-attachment: fixed;
     background-repeat: no-repeat;
