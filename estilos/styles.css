@@ -1,17 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Frijole|Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+@font-face {
+    font-family: 'EraserDust';
+    src: url('/fontes/EraserDust.ttf');
+}
+
+@font-face {
+    font-family: 'EraserDust';
+    src: url('/fontes/EraserRegular.ttf');
+}
 
 body {
-    font-family: 'Frijole';
-    background-color: #000 !important;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
+    /*background-color: #000 !important;*/
+    background-image: url("/img/backboard.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
     color: #f4f4f4;
     margin: 0px;
     overflow: auto;
 }
 
+#logo {
+    text-align: center;
+    width: 250px;
+}
+
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 30px auto;
     overflow: auto;
+}
+
+header {
+
+    text-align: center !important;
+    font-size: 1.2em
 }
 
 h3 {
@@ -26,20 +52,44 @@ table {
     border-spacing: 0;
 }
 
+/*
 tbody tr:nth-child(odd) {
     background-color: #777;
 }
+*/
 
 thead {
-    text-align: left;
+    text-align: center;
+}
+
+.tHeader {
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.6em;
+    color: #fff;
+    border-bottom: 5px solid #fff;
+    border-right: 5px solid #fff;
+}
+
+.tHeader:nth-child(5){
+    border-right: 0px solid #fff;
 }
 
 td {
     min-width: 140px;
     vertical-align: top;
     padding: 8px;
-    font-family: 'Patua One';
-    font-size: 1.4em
+    font-size: 1.4em;
+    border-bottom: 5px solid #fff;
+    border-right: 5px solid #fff;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    vertical-align: middle;
+}
+
+td:nth-child(5){
+    border-right: 0px solid #fff;
 }
 
 td a {
@@ -47,8 +97,16 @@ td a {
 }
 
 tr {
-    height: 50px;
+    font-family: 'EraserDust';
+    text-align: center;
 }
+
+.local {
+    font-style: italic;
+    font-size: .8em;
+}
+
+/* listas */
 
 ul,
 ol {
@@ -62,10 +120,18 @@ ul li {
     line-height: 22px;
 }
 
+.menu li {
+    display: inline-block;
+    margin: 30px 30px 20px 0;
+}
+
+
+/* footer */
+
 footer {
     padding-top: 20px;
     margin-top: 60px;
-    border-top: 4px solid #CCF4FF;
+    border-top: 0px solid #CCF4FF;
     -webkit-column-count: 6;
     column-count: 6;
     -webkit-column-gap: 20px;
@@ -140,7 +206,8 @@ img {
 }
 
 hr {
-    border: 2px solid #CCF4FF;
+    border: 2px solid #fff;
+    max-width: 80%;
 }
 
 p {
@@ -241,12 +308,14 @@ h3 code {
     min-width: 600px;
 }
 
+/*
 .tHeader::after {
     content: " \2193 \2191 ";
     font-size: 10px;
     padding-left: 3px;
     cursor: pointer;
 }
+*/
 
 
 /* Map Popup Style */
@@ -286,12 +355,4 @@ input {
     width: 200px;
     font-size: 16px;
     padding-bottom: 6px;
-}
-
-.tHeader {
-    padding: 8px;
-    cursor: pointer;
-    text-align: left;
-    font-size: 1.4em;
-    color: #fff;
 }
