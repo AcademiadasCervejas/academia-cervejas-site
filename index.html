@@ -14,14 +14,15 @@
 <body>
     
     <div class="container">
-        <header>
-        <img src="img/logo_oficial.svg" alt="logo" id="logo">
-        
+        <header>        
             <ul class="menu">
-                <li style="color:#fff"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li style="color:#fff"><a href="https://www.facebook.com/academiadascervejas/"><i class="fa fa-facebook-official" aria-hidden="true" target="_blank"></i></a></li>
+                <li style="color:#fff"><a href="https://www.instagram.com/academiadascervejas/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 <li>Contato</li>
                 <li>Localização</li>
+                <li>Parceiros</li>
             </ul>   
+            <img src="img/logo_oficial.svg" alt="logo" id="logo">
         </header>
         
     </div>
@@ -44,9 +45,11 @@
             <tr>
                 <th class="tHeader">Cervejaria</th>
                 <th class="tHeader">Estilo</th>
-                <th class="tHeader">300 ml</th>
-                <th class="tHeader">470 &nbsp; ml</th>
-                <th class="tHeader">1 &nbsp; Litro</th>
+                <th class="tHeader">ABV</th>
+                <th class="tHeader">IBU</th>
+                <th class="tHeader">300 ml <br>R$</th>
+                <th class="tHeader">470 ml <br>R$</th>
+                <th class="tHeader">1 L <br>R$</th>
                 <th class="tHeader">Barril</th>
             </tr>
             {{#rows}}
@@ -56,9 +59,11 @@
                 <span class="local">{{local}}</span>
                 </td>
                 <td>{{estilo}}</td>
-                <td>R$ {{half}}</td>
-                <td>R$ {{pint}}</td>
-                <td>R$ {{growler}}</td>
+                <td>{{ABV}}</td>
+                <td>{{IBU}}</td>
+                <td>{{half}}</td>
+                <td>{{pint}}</td>
+                <td>{{growler}}</td>
                 <td><img src="{{foto}}" width="120px" alt="foto da cerveja"></td>
             </tr>
             {{/rows}}

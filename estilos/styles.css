@@ -92,14 +92,14 @@ thead {
     border-right: 5px solid #fff;
 }
 
-.tHeader:nth-child(6){
+.tHeader:nth-child(8){
     border-right: 0px solid #fff;
 }
 
 td {
     min-width: 100px;
     vertical-align: top;
-    padding: 8px;
+    padding: 2px;
     font-size: 1.3em;
     border-top: 5px solid #fff;
     border-right: 5px solid #fff;
@@ -108,7 +108,7 @@ td {
     vertical-align: middle;
 }
 
-td:nth-child(6){
+td:nth-child(8){
     border-right: 0px solid #fff;
 }
 
@@ -254,19 +254,14 @@ p {
     font-size: 18px;
 }
 
-p a,
+p,
 a {
-    color: #535353;
+    color: #fff;
     text-decoration: none;
     padding-bottom: 0px;
-    border-bottom: 2px #CCF4FF solid;
 }
 
 a:hover {
-    color: #47CCFC;
-}
-
-a:active {
     color: #47CCFC;
 }
 
