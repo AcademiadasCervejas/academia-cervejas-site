@@ -76,6 +76,14 @@ body {
   margin-right: 30px;
 }
 
+.lista-parceiros li a{
+  color: #47CCFC;
+}
+
+.lista-parceiros li a:hover{
+  color: #fff;
+}
+
 #mapa{
     width: 100%;
     max-width: 400px;

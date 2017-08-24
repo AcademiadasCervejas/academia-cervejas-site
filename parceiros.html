@@ -32,17 +32,21 @@
   <div id="info" class="container"></div>
 
   <div class="main_container">
-    <p class="endereco">Av. Sen. Souza Naves, 851 • Alto da Rua XV CEP 80050-152 • Curitiba (PR) • Tel: (41) 3155-6631</p>
-    <div class="footer">
-      <div id="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14412.859715231087!2d-49.249178!3d-25.431077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb2970aba5e42c8e!2sAcademia+das+Cervejas!5e0!3m2!1spt-BR!2sbr!4v1500255624182" height="500" frameborder="0"
-          style="border:0" allowfullscreen id="mapa" id="gmaps"></iframe>
+    <p class="endereco"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Av. Sen. Souza Naves, 851 • Alto da Rua XV, Matriz
+      <p class="endereco">CEP 80050-152 • Curitiba (PR)</p> <br />
+      <p class="endereco"> <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i> Tel: (41) 3155-6631</p><br />
+      <p class="endereco"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> <a href="mailto:academiadascervejas@gmail.com">academiadascervejas@gmail.com</a></p>
+
+      <div class="footer">
+        <div id="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14412.859715231087!2d-49.249178!3d-25.431077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb2970aba5e42c8e!2sAcademia+das+Cervejas!5e0!3m2!1spt-BR!2sbr!4v1500255624182" height="500" frameborder="0"
+            style="border:0" allowfullscreen id="mapa" id="gmaps"></iframe>
+        </div>
+        <div id="fb-embed">
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Facademiadascervejas%2F&tabs=timeline&width=360&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1085014414958426"
+            width="360" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
       </div>
-      <div id="fb-embed">
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Facademiadascervejas%2F&tabs=timeline&width=360&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1085014414958426"
-          width="360" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-      </div>
-    </div>
   </div>
 
   <script id="tools" type="text/html">
@@ -54,13 +58,13 @@
         <ul class="lista-parceiros">
           <li><a href="mailto:{{email}} target="_blank""><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp; {{email}}</a></li>
           <li><a href="{{site}}" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> &nbsp; {{site}}</a></li>
-          <li><i class="fa fa-phone-square" aria-hidden="true"></i> {{telefone}} </li>
+          <li><a href="https://instagram.com/{{facebook}}" target="_blank"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a></li>
+          <li><a href="https://facebook.com/{{instagram}}" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
         </ul>
         <br />
         <ul class="lista-parceiros">
-          <li>Redes sociais: </li>
-          <li><a href="https://instagram.com/{{facebook}}" target="_blank"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a></li>
-          <li><a href="https://facebook.com/{{instagram}}" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+          <li> <i class="fa fa-map-marker" aria-hidden="true"></i> {{endereco}} </li>
+          <li><i class="fa fa-phone-square" aria-hidden="true"></i> {{telefone}} </li>
         </ul>
       </div>
     </div>
