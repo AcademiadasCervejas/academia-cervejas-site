@@ -136,6 +136,8 @@ table {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
+    border-top: 10px solid rgba(255,255,255,.8);
+    border-image: url("../img/line.png") 15;
 }
 
 .endereco {
@@ -160,7 +162,9 @@ thead {
     font-size: 1.3em;
     color: #fff;
     border-right: 10px solid rgba(255,255,255,.8);
-    border-image: url("../img/line.png") 20;
+    border-bottom: 10px solid rgba(255,255,255,.8);
+    border-image: url("../img/line.png") 8;
+    border-image-outset: 0 6px;
 }
 
 .tHeader:nth-child(8){
@@ -172,13 +176,10 @@ td {
     vertical-align: top;
     padding: 0;
     font-size: 1.3em;
-    border-top: 10px solid rgba(255,255,255,.8);
     border-right: 10px solid rgba(255,255,255,.8);
-    border-image: url("../img/line.png") 20;
-    /*
-    border-top: 5px solid #c00;
-    border-right: 5px solid #fff;
-    */
+    border-bottom: 10px solid rgba(255,255,255,.8);
+    border-image: url("../img/line.png") 8;
+    border-image-outset: 0 6px;
     text-align: center;
     font-family: 'EraserDust';
     vertical-align: middle;
@@ -186,6 +187,10 @@ td {
 
 td:nth-child(8){
     border-right: 0px solid #fff;
+}
+
+td:first-child{
+    border-left: 0px solid #fff;
 }
 
 td:nth-child(2){
