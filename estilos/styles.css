@@ -59,12 +59,19 @@ body {
 .logopartner{
   max-width:100px;
   width: 100%;
-  margin-bottom:-10px;
+  float: right;
 }
 
 .parceiros {
   max-width: 70%;
-  margin: 0 auto;
+  margin: 30px auto;
+  border: 10px solid rgba(255,255,255,.8);
+  border-image: url("../img/line.png") 20;
+  padding: 30px;
+}
+
+.parceiros h2{
+  font-family: "EraserRegular";
 }
 
 .lista-parceiros{
@@ -307,7 +314,7 @@ h6 {
 }
 
 h2 {
-    margin-top: 40px;
+    margin-top: 15px;
 }
 
 .nome-parceiro {

@@ -32,6 +32,7 @@
   <div id="info" class="container"></div>
 
   <div class="main_container">
+    <hr>
     <p class="endereco"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Av. Sen. Souza Naves, 851 • Alto da Rua XV, Matriz
       <p class="endereco">CEP 80050-152 • Curitiba (PR)</p> <br />
       <p class="endereco"> <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i> Tel: (41) 3155-6631</p><br />
@@ -53,7 +54,7 @@
     {{#rows}}
     <div id="{{rowNumber}}">
       <div class="parceiros">
-        <h2 class="nome-parceiro"> <img src="{{logo}}" class="logopartner" /> &nbsp; • &nbsp; <a href="{{site}}" target="_blank">{{nome}} </h2>
+        <h2 class="nome-parceiro"> <a href="{{site}}" target="_blank">{{nome}} <img src="{{logo}}" class="logopartner" /></h2>
         <p> {{descricao}} </p>
         <ul class="lista-parceiros">
           <li><a href="mailto:{{email}} target="_blank""><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp; {{email}}</a></li>
@@ -68,7 +69,6 @@
         </ul>
       </div>
     </div>
-    <hr />
     {{/rows}}
   </script>
 
