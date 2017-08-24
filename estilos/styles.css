@@ -15,18 +15,39 @@ body {
     font-size: 18px;
     background-image: url("https://github.com/voltdatalab/academia-cervejas/blob/gh-pages/img/backboard.png?raw=true");
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
     color: #f4f4f4;
     margin: 0px;
     overflow: auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 680px) {
     body {
         background-image: url("https://github.com/voltdatalab/academia-cervejas/blob/gh-pages/img/backboard.png?raw=true");
         background-attachment: scroll;
         background-repeat: repeat;
+    }
+    .detalhes{
+      display: none;
+    }
+    .tHeader, td {
+      font-size: 1em;
+    }
+    .parceiros {
+      max-width: 360px;
+    }
+    #mapa{
+        width: 100%;
+        max-width: 400px;
+        margin-left: 40px !important;
+        float: none !important;
+    }
+    #fb-embed{
+      width: 100% !important;
+      margin-left: 100px !important;
+      margin-top: 100px;
+      float: none !important;
     }
 }
 
@@ -35,9 +56,39 @@ body {
     width: 250px;
 }
 
+.logopartner{
+  max-width:100px;
+  width: 100%;
+  margin-bottom:-10px;
+}
+
+.parceiros {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.lista-parceiros{
+  margin-left: -15px;
+}
+
+.lista-parceiros li{
+  display: inline-block;
+  margin-right: 30px;
+}
+
 #mapa{
     width: 100%;
-    max-width: 900px;
+    max-width: 400px;
+    float: left;
+}
+
+#fb-embed{
+  float: right;
+  width: 40%;
+}
+
+#gmaps {
+  width: 500px
 }
 
 .container {
@@ -47,9 +98,9 @@ body {
 }
 
 .main_container{
-    max-width: 900px;
+    max-width: 1000px;
     margin: 30px auto;
-    overflow: auto;
+    overflow: hidden;
 }
 
 header {
@@ -72,6 +123,10 @@ table {
     margin: 0 auto;
 }
 
+p {
+  margin: 0 10%;
+}
+
 /*
 tbody tr:nth-child(odd) {
     background-color: #777;
@@ -83,13 +138,13 @@ thead {
 }
 
 .tHeader {
-    padding: 12px;
+    padding: 5px;
     cursor: pointer;
     text-align: center;
     font-size: 1.3em;
     color: #fff;
-    border-bottom: 5px solid #fff;
-    border-right: 5px solid #fff;
+    border-right: 10px solid rgba(255,255,255,.8);
+    border-image: url("../img/line.png") 20;
 }
 
 .tHeader:nth-child(8){
@@ -99,10 +154,15 @@ thead {
 td {
     min-width: 100px;
     vertical-align: top;
-    padding: 2px;
+    padding: 0;
     font-size: 1.3em;
-    border-top: 5px solid #fff;
+    border-top: 10px solid rgba(255,255,255,.8);
+    border-right: 10px solid rgba(255,255,255,.8);
+    border-image: url("../img/line.png") 20;
+    /*
+    border-top: 5px solid #c00;
     border-right: 5px solid #fff;
+    */
     text-align: center;
     font-family: 'EraserDust';
     vertical-align: middle;
@@ -134,7 +194,7 @@ tr {
 
 .breja{
     font-weight: 600;
-    font-family: 'Teko', sans-serif;
+    font-family: 'EraserDust', sans-serif;
 }
 
 .combo {
@@ -142,7 +202,7 @@ tr {
 }
 
 .footer {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 /* listas */
@@ -178,6 +238,7 @@ footer {
     -moz-column-count: 6;
     -moz-column-gap: 20px;
     height: 125px;
+    width: 100%
 }
 
 footer ul {
@@ -240,12 +301,17 @@ h2 {
     margin-top: 40px;
 }
 
+.nome-parceiro {
+  line-height: 1.7em
+}
+
 img {
     max-width: 100%;
 }
 
 hr {
-    border: 2px solid #fff;
+    border-top: 10px solid rgba(255,255,255,.8);
+    border-image: url("../img/line.png") 20;
     max-width: 80%;
     margin-top: 100px;
 }

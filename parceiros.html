@@ -6,12 +6,13 @@
   <title>Academia das Brejas</title>
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <link rel="shortcut icon" href="/favicon.png">
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-  <script type='text/javascript' src='js/sheetsee.js'></script>
+  <script type="text/javascript" src="js/ICanHaz.js"></script>
+  <script type="text/javascript" src='js/jquery.js'></script>
+  <script type="text/javascript" src='js/site.js'></script>
+  <script type="text/javascript" src='js/tabletop1.3.4.js'></script>
   <link rel='stylesheet' type='text/css' href="estilos/styles.css">
   <script src="https://use.fontawesome.com/ebef64dc49.js"></script>
 </head>
-
 
 
 <div class="container">
@@ -27,11 +28,9 @@
 </div>
 
 <body>
-  <div class="main_container">
+  <div id="tools" class="container"><span class="flash animated">Carregando parceiros...</span></div>
+  <div id="info" class="container"></div>
 
-    <div id="fullTable" style="margin:0 auto">Carregando...</div>
-  </div>
-  <hr>
   <div class="main_container">
     <p style="text-align:center;">Av. Sen. Souza Naves, 851 • Alto da Rua XV CEP 80050-152 • Curitiba (PR) • Tel: (41) 3155-6631</p>
     <div class="footer">
@@ -46,58 +45,40 @@
     </div>
   </div>
 
-  <script id="fullTable_template" type="text/html">
-    <table>
-      <tr>
-        <th class="tHeader">Cervejaria</th>
-        <th class="tHeader">Estilo</th>
-        <th class="tHeader detalhes">ABV</th>
-        <th class="tHeader detalhes">IBU</th>
-        <th class="tHeader">300 ml <br>R$</th>
-        <th class="tHeader">470 ml <br>R$</th>
-        <th class="tHeader">1 L <br>R$</th>
-        <th class="tHeader detalhes">Barril</th>
-      </tr>
-      {{#rows}}
-      <tr>
-        <td class="combo"><span class="breja">{{cervejaria}}</span>
-          <br>
-          <span class="local">{{local}}</span>
-        </td>
-        <td>{{estilo}}</td>
-        <td class="detalhes">{{ABV}}</td>
-        <td class="detalhes">{{IBU}}</td>
-        <td>{{half}}</td>
-        <td>{{pint}}</td>
-        <td>{{growler}}</td>
-        <td class="detalhes"><img src="{{foto}}" width="120px" alt="foto da cerveja"></td>
-      </tr>
-      {{/rows}}
-    </table>
+  <script id="tools" type="text/html">
+    {{#rows}}
+    <div id="{{rowNumber}}">
+      <div class="parceiros">
+        <h2 class="nome-parceiro"> <img src="{{logo}}" class="logopartner" /> &nbsp; • &nbsp; <a href="{{site}}" target="_blank">{{nome}} </h2>
+        <p> {{descricao}} </p>
+        <ul class="lista-parceiros">
+          <li><a href="mailto:{{email}} target="_blank""><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp; {{email}}</a></li>
+          <li><a href="{{site}}" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> &nbsp; {{site}}</a></li>
+          <li><i class="fa fa-phone-square" aria-hidden="true"></i> {{telefone}} </li>
+        </ul>
+        <br />
+        <ul class="lista-parceiros">
+          <li>Redes sociais: </li>
+          <li><a href="https://instagram.com/{{facebook}}" target="_blank"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a></li>
+          <li><a href="https://facebook.com/{{instagram}}" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    {{/rows}}
   </script>
-
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
-      var URL = "1W2Zzz7OFro4D4ynvqyG8RYV8UOgeJ0c7iaqW5hU8tAM"
+      var URL = "1lSNKw-xv1erpGBsSlxQHJFy-K1ywIHWaARiVtIBxPzk"
       Tabletop.init({
         key: URL,
-        callback: showInfo,
+        callback: initialize,
         simpleSheet: true
       })
     })
-
-    function showInfo(data) {
-      var tableOptions = {
-        "data": data,
-        "pagination": 0,
-        "tableDiv": "#fullTable",
-        "filterDiv": "#fullTableFilter"
-      }
-      Sheetsee.makeTable(tableOptions)
-      Sheetsee.initiateTableFilter(tableOptions)
-    }
   </script>
+</body>
 </body>
 
 </html>
