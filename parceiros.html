@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8'>
-  <title>Academia das Brejas</title>
+  <title>Academia das Cervejas</title>
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <link rel="shortcut icon" href="/favicon.png">
   <script type="text/javascript" src="js/ICanHaz.js"></script>
@@ -12,6 +12,25 @@
   <script type="text/javascript" src='js/tabletop1.3.4.js'></script>
   <link rel='stylesheet' type='text/css' href="estilos/styles.css">
   <script src="https://use.fontawesome.com/ebef64dc49.js"></script>
+  <!-- metas -->
+  <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="http://academiadascervejas.com.br/">
+    <meta property="og:title" content="Academia das Cervejas">
+    <meta property="og:site_name" content="Academia das Cervejas">
+    <meta property="og:description" content="Av. Sen. Souza Naves, 851 • Alto da Rua XV, Matriz CEP 80050-152 • Curitiba (PR) ">
+    <meta property="og:image" content="social.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Bar e Pub Academia das Cervejas, em Curitiba">
+    <meta name='subtitle' content='Bar e Pub Academia das Cervejas, em Curitiba'>
+    <meta name="author" content="@sergiospagnuolo">
+    <meta name="keywords" content="cerveja, cerveja artesanal, pub, bar, Curitiba">
+    <meta name='url' content='http://academiadascervejas.com.br/'>
+    <meta name='coverage' content='Brasil'>
+    <meta name='distribution' content='Global'>
+    <meta name='rating' content='General'>
+    <meta name='target' content='all'>
+    <meta name='HandheldFriendly' content='True'>
 </head>
 
 
@@ -20,10 +39,10 @@
     <ul class="menu">
       <li style="color:#fff"><a href="https://www.facebook.com/academiadascervejas/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
       <li style="color:#fff"> <a href="https://www.instagram.com/academiadascervejas/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      <li><a href="index.html">Brejas</a></li>
-      <li><a href="cardapio.html">Rangos</a></li>
-      <li><a href="#mapa">Contato</a></li>
-      <li> <a href="parceiros.html">Parceiros</a></li>
+      <li><a href="index.html"><i class="fa fa-beer" aria-hidden="true"></i> Cervejas</a></li>
+      <li><a href="cardapio.html"><i class="fa fa-cutlery" aria-hidden="true"></i> Cardápio</a></li>
+      <li><a href="#mapa"><i class="fa fa-map-marker" aria-hidden="true"></i> Contato</a></li>
+      <li> <a href="parceiros.html"><i class="fa fa-users" aria-hidden="true"></i> Parceiros</a></li>
     </ul>
     <a href="index.html"><img src="img/logo_oficial.png" alt="logo" id="logo"></a>
   </header>
@@ -56,7 +75,7 @@
     {{#rows}}
     <div id="{{rowNumber}}">
       <div class="parceiros">
-        <h2 class="nome-parceiro"> <a href="{{site}}" target="_blank">{{nome}} <img src="{{logo}}" class="logopartner" /></h2>
+        <h2 class="nome-parceiro"> <a href="{{site}}" target="_blank">{{nome}}</a> <img src="{{logo}}" class="logopartner" /></h2>
         <p> {{descricao}} </p>
         <ul class="lista-parceiros">
           <li><a href="mailto:{{email}} target="_blank""><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp; {{email}}</a></li>
@@ -84,7 +103,6 @@
       })
     })
   </script>
-</body>
 </body>
 
 </html>

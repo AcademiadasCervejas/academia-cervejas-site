@@ -6,10 +6,11 @@
   <title>Academia das Cervejas</title>
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <link rel="shortcut icon" href="/favicon.png">
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-  <script type='text/javascript' src='js/sheetsee.js'></script>
+  <script type="text/javascript" src="js/ICanHaz.js"></script>
+  <script type="text/javascript" src='js/jquery.js'></script>
+  <script type="text/javascript" src='js/site.js'></script>
+  <script type="text/javascript" src='js/tabletop1.3.4.js'></script>
   <link rel='stylesheet' type='text/css' href="estilos/styles.css">
-  <link rel='stylesheet' type='text/css' href="estilos/tabelas.css">
   <script src="https://use.fontawesome.com/ebef64dc49.js"></script>
   <!-- metas -->
   <meta property="og:locale" content="pt_BR">
@@ -33,7 +34,6 @@
 </head>
 
 
-
 <div class="container">
   <header>
     <ul class="menu">
@@ -49,10 +49,8 @@
 </div>
 
 <body>
-  <div class="main_container">
-
-    <div id="fullTable" style="margin:0 auto">Carregando...</div>
-  </div>
+  <div id="tools" class="container"><span class="flash animated">Carregando cardápio...</span></div>
+  <div id="info" class="container"></div>
 
   <div class="main_container">
     <hr>
@@ -73,57 +71,32 @@
       </div>
   </div>
 
-  <script id="fullTable_template" type="text/html">
-    <table class="responsive-table">
-      <tr>
-        <th scope="col" class="tHeader">Cervejaria</th>
-        <th scope="col" class="tHeader">Estilo</th>
-        <th scope="col" class="tHeader detalhes">ABV</th>
-        <th scope="col" class="tHeader detalhes">IBU</th>
-        <th scope="col" class="tHeader">300 ml <br>R$</th>
-        <th scope="col" class="tHeader">470 ml <br>R$</th>
-        <th scope="col" class="tHeader">1 L <br>R$</th>
-        <th scope="col" class="tHeader detalhes barril-nivel">Barril</th>
-      </tr>
-      {{#rows}}
-      <tr>
-        <td scope="row" class="combo" data-title="Cervejaria"><span class="breja">{{cervejaria}}</span>
-          <br>
-          <span class="local">{{local}}</span>
-        </td>
-        <td scope="row" data-title="Estilo">{{estilo}}</td>
-        <td scope="row" data-title="ABV" class="detalhes">{{ABV}}</td>
-        <td scope="row" data-title="IBU" class="detalhes">{{IBU}}</td>
-        <td scope="row" data-title="300 ml - R$">{{half}}</td>
-        <td scope="row" data-title="470 ml - R$">{{pint}}</td>
-        <td scope="row" data-title="1 L - R$">{{growler}}</td>
-        <td scope="row" data-title="Barril" class="detalhes barril-nivel"><img src="{{foto}}" width="120px" alt="foto da cerveja"></td>
-      </tr>
-      {{/rows}}
-    </table>
+  <script id="tools" type="text/html">
+    {{#rows}}
+    <div id="{{rowNumber}}">
+      <div class="parceiros">
+        <h2 class="nome-parceiro">{{tipo}} <span class="preco-rango">R$ {{valor}}</span></h2>
+        <h3 class="desc-rango"> {{descricao}} </h3>
+        <ul class="harmonia">
+          <li style="color:#fff"> Vai bem com: </li>
+          <li> {{harmoniza1}}</li>
+          <li> {{harmoniza2}}</li>
+          <li> {{harmoniza3}}</li>
+        </ul>
+      </div>
+    </div>
+    {{/rows}}
   </script>
-
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
-      var URL = "1W2Zzz7OFro4D4ynvqyG8RYV8UOgeJ0c7iaqW5hU8tAM"
+      var URL = "1QVQ9JdVH23HExsCjxYJHT96OrdTVR_ewDFROjDhogWA"
       Tabletop.init({
         key: URL,
-        callback: showInfo,
+        callback: initialize,
         simpleSheet: true
       })
     })
-
-    function showInfo(data) {
-      var tableOptions = {
-        "data": data,
-        "pagination": 0,
-        "tableDiv": "#fullTable",
-        "filterDiv": "#fullTableFilter"
-      }
-      Sheetsee.makeTable(tableOptions)
-      Sheetsee.initiateTableFilter(tableOptions)
-    }
   </script>
 </body>
 
