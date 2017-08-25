@@ -75,7 +75,7 @@
     {{#rows}}
     <div id="{{rowNumber}}">
       <div class="parceiros">
-        <h2 class="nome-parceiro"> <a href="{{site}}" target="_blank">{{nome}}</a> <img src="{{logo}}" class="logopartner" /></h2>
+        <h2 class="nome-parceiro"> <a href="{{site}}" target="_blank">{{nome}}</a></h2>
         <p> {{descricao}} </p>
         <ul class="lista-parceiros">
           <li><a href="mailto:{{email}} target="_blank""><i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp; {{email}}</a></li>
@@ -88,6 +88,9 @@
           <li> <i class="fa fa-map-marker" aria-hidden="true"></i> {{endereco}} </li>
           <li><i class="fa fa-phone-square" aria-hidden="true"></i> {{telefone}} </li>
         </ul>
+        <p>
+          <img src="{{logo}}" class="logopartner" />
+        </p>
       </div>
     </div>
     {{/rows}}
