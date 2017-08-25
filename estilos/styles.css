@@ -63,23 +63,24 @@ body {
     border-left: 10px solid rgba(255, 255, 255, .8);
     border-image: url("../img/line.png") 14 !important;
   }
-  .imgrango{
+  .imgrango {
     width: 100% !important;
     max-width: 400px !important;
     float: none !important;
     margin: 10px;
   }
-  .preco-rango{
+  .preco-rango {
     float: none !important;
   }
-  .breaker{
+  .breaker {
     display: inline !important;
   }
 }
 
-.breaker{
+.breaker {
   display: none;
 }
+
 #logo {
   text-align: center;
   width: 250px;
@@ -184,7 +185,7 @@ table {
   font-weight: 300;
 }
 
-.harmonia li{
+.harmonia li {
   color: #47CCFC;
   padding: 5px 10px;
   display: inline-block;
@@ -193,8 +194,7 @@ table {
   font-weight: 700;
 }
 
-
-.imgrango{
+.imgrango {
   max-width: 200px;
   border-radius: 10px;
   float: right;
@@ -207,7 +207,7 @@ table {
   margin-left: -25px;
 }
 
-.horarios li{
+.horarios li {
   padding: 5px 10px;
   display: inline-block;
   margin-right: 5px;
@@ -219,16 +219,17 @@ table {
   margin-left: 30px;
 }
 
-#anuncio{
+#anuncio {
   background-color: #47CCFC;
   color: #fff;
   text-align: center;
 }
 
-#anuncio h4{
+#anuncio h4 {
   font-size: 1.8em;
   color: #f4f4f4;
 }
+
 
 /*
 tbody tr:nth-child(odd) {
