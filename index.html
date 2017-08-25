@@ -9,6 +9,8 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
   <script type='text/javascript' src='js/sheetsee.js'></script>
   <link rel='stylesheet' type='text/css' href="estilos/styles.css">
+  <link rel='stylesheet' type='text/css' href="estilos/tabelas.css">
+
   <script src="https://use.fontawesome.com/ebef64dc49.js"></script>
 </head>
 
@@ -54,30 +56,30 @@
   </div>
 
   <script id="fullTable_template" type="text/html">
-    <table>
+    <table class="responsive-table">
       <tr>
-        <th class="tHeader">Cervejaria</th>
-        <th class="tHeader">Estilo</th>
-        <th class="tHeader detalhes">ABV</th>
-        <th class="tHeader detalhes">IBU</th>
-        <th class="tHeader">300 ml <br>R$</th>
-        <th class="tHeader">470 ml <br>R$</th>
-        <th class="tHeader">1 L <br>R$</th>
-        <th class="tHeader detalhes">Barril</th>
+        <th scope="col" class="tHeader">Cervejaria</th>
+        <th scope="col" class="tHeader">Estilo</th>
+        <th scope="col" class="tHeader detalhes">ABV</th>
+        <th scope="col" class="tHeader detalhes">IBU</th>
+        <th scope="col" class="tHeader">300 ml <br>R$</th>
+        <th scope="col" class="tHeader">470 ml <br>R$</th>
+        <th scope="col" class="tHeader">1 L <br>R$</th>
+        <th scope="col" class="tHeader detalhes barril-nivel">Barril</th>
       </tr>
       {{#rows}}
       <tr>
-        <td class="combo"><span class="breja">{{cervejaria}}</span>
+        <td scope="row" class="combo" data-title="Cervejaria"><span class="breja">{{cervejaria}}</span>
           <br>
           <span class="local">{{local}}</span>
         </td>
-        <td>{{estilo}}</td>
-        <td class="detalhes">{{ABV}}</td>
-        <td class="detalhes">{{IBU}}</td>
-        <td>{{half}}</td>
-        <td>{{pint}}</td>
-        <td>{{growler}}</td>
-        <td class="detalhes"><img src="{{foto}}" width="120px" alt="foto da cerveja"></td>
+        <td scope="row" data-title="Estilo">{{estilo}}</td>
+        <td scope="row" data-title="ABV" class="detalhes">{{ABV}}</td>
+        <td scope="row" data-title="IBU" class="detalhes">{{IBU}}</td>
+        <td scope="row" data-title="300 ml - R$">{{half}}</td>
+        <td scope="row" data-title="470 ml - R$">{{pint}}</td>
+        <td scope="row" data-title="1 L - R$">{{growler}}</td>
+        <td scope="row" data-title="Barril" class="detalhes barril-nivel"><img src="{{foto}}" width="120px" alt="foto da cerveja"></td>
       </tr>
       {{/rows}}
     </table>

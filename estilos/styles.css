@@ -22,7 +22,9 @@ body {
     overflow: auto;
 }
 
-@media screen and (max-width: 680px) {
+
+
+@media screen and (max-width: 850px) {
     body {
         background-image: url("https://github.com/voltdatalab/academia-cervejas/blob/gh-pages/img/backboard.png?raw=true");
         background-attachment: scroll;
@@ -38,17 +40,28 @@ body {
       max-width: 360px;
     }
     #mapa{
-        width: 100%;
-        max-width: 400px;
-        margin-left: 40px !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
         float: none !important;
     }
     #fb-embed{
       width: 100% !important;
-      margin-left: 100px !important;
-      margin-top: 100px;
+      max-width: 350px !important;
+      margin: 100px auto !important;
       float: none !important;
+}
+    .tHeader{
+      display: none !important;
     }
+    .barril-nivel{
+      display: none !important;
+    }
+    td {
+        border-left: 10px solid rgba(255,255,255,.8);
+        border-image: url("../img/line.png") 14 !important;
+      }
+
 }
 
 #logo {
