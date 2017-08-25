@@ -76,6 +76,9 @@
     <div id="{{rowNumber}}">
       <div class="parceiros">
         <h2 class="nome-parceiro">{{tipo}} <span class="preco-rango">R$ {{valor}}</span></h2>
+        <div class="imgrango">
+          <img src="{{imagem}}" />
+        </div>
         <h3 class="desc-rango"> {{descricao}} </h3>
         <ul class="harmonia">
           <li style="color:#fff"> Vai bem com: </li>
@@ -83,6 +86,7 @@
           <li> {{harmoniza2}}</li>
           <li> {{harmoniza3}}</li>
         </ul>
+        <br />
       </div>
     </div>
     {{/rows}}

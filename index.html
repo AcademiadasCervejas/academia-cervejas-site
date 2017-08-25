@@ -50,12 +50,18 @@
 
 <body>
   <div class="main_container">
-
     <div id="fullTable" style="margin:0 auto">Carregando...</div>
   </div>
 
   <div class="main_container">
     <hr>
+    <p class="endereco">
+        <i class="fa fa-clock-o" aria-hidden="true"></i> Segunda a quinta - 14h às 22h •
+        <i class="fa fa-clock-o" aria-hidden="true"></i> Sexta-feira - 14h às 23h •
+        <i class="fa fa-clock-o" aria-hidden="true"></i> Sábado - 10h às 23h •
+        <i class="fa fa-clock-o" aria-hidden="true"></i> Domingo - 10h às 20h
+    </p>
+    <br />
     <p class="endereco"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Av. Sen. Souza Naves, 851 • Alto da Rua XV, Matriz
       <p class="endereco">CEP 80050-152 • Curitiba (PR)</p> <br />
       <p class="endereco"> <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i> Tel: (41) 3155-6631</p><br />
@@ -74,6 +80,11 @@
   </div>
 
   <script id="fullTable_template" type="text/html">
+    {{#rows}}
+    <div id="anuncio">
+      <h4>{{anuncio}}</h4>
+    </div>
+    {{/rows}}
     <table class="responsive-table">
       <tr>
         <th scope="col" class="tHeader">Cervejaria</th>

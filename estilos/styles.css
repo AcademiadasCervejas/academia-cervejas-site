@@ -9,6 +9,11 @@
   src: url("../fontes/EraserRegular.ttf") format('truetype');
 }
 
+@font-face {
+  font-family: "DK";
+  src: url("../fontes/DK.ttf") format('truetype');
+}
+
 body {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 18px;
@@ -77,10 +82,11 @@ body {
   border: 10px solid rgba(255, 255, 255, .8);
   border-image: url("../img/line.png") 20;
   padding: 30px;
+  padding-bottom: 100px;
 }
 
 .parceiros h2 {
-  font-family: "EraserRegular";
+  font-family: "DK";
 }
 
 .lista-parceiros {
@@ -173,8 +179,41 @@ table {
   font-weight: 700;
 }
 
+
+.imgrango{
+  max-width: 200px;
+  border-radius: 10px;
+  float: right;
+  margin: -10px 0 20px 10px;
+  overflow: auto;
+  position: relative;
+}
+
 .harmonia {
   margin-left: -25px;
+}
+
+.horarios li{
+  padding: 5px 10px;
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.horarios {
+  margin-left: 30px;
+}
+
+#anuncio{
+  background-color: #47CCFC;
+  color: #fff;
+  text-align: center;
+}
+
+#anuncio h4{
+  font-size: 1.8em;
+  color: #f4f4f4;
 }
 
 /*
@@ -192,6 +231,7 @@ thead {
   cursor: pointer;
   text-align: center;
   font-size: 1.3em;
+  font-family: "DK";
   color: #fff;
   border-right: 10px solid rgba(255, 255, 255, .8);
   border-bottom: 10px solid rgba(255, 255, 255, .8);
@@ -215,8 +255,9 @@ td {
   border-image: url("../img/line.png") 8;
   border-image-outset: 0 6px;
   text-align: center;
-  font-family: 'EraserDust';
+  font-family: 'DK';
   vertical-align: middle;
+  font-weight: 300;
 }
 
 td:nth-child(8) {
