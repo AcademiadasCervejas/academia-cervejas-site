@@ -165,6 +165,8 @@ thead {
     border-bottom: 10px solid rgba(255,255,255,.8);
     border-image: url("../img/line.png") 8;
     border-image-outset: 0 6px;
+    padding-top:20px;
+    vertical-align: middle;
 }
 
 .tHeader:nth-child(8){
