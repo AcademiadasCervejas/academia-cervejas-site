@@ -144,7 +144,7 @@ body {
 
 .main_container {
   max-width: 1000px;
-  margin: 30px auto;
+  margin: -50px auto 10px;
   overflow: hidden;
 }
 
@@ -261,17 +261,18 @@ thead {
 }
 
 td {
-  min-width: 100px;
+  min-width: 60px;
+  width: 100%;
   vertical-align: top;
-  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2px;
   font-size: 1.3em;
   border-right: 10px solid rgba(255, 255, 255, .8);
   border-bottom: 10px solid rgba(255, 255, 255, .8);
   border-image: url("../img/line.png") 8;
   border-image-outset: 0 6px;
-  text-align: center;
   font-family: 'DK';
-  vertical-align: middle;
   font-weight: 300;
 }
 
