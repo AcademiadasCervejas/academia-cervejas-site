@@ -59,6 +59,9 @@ body {
   .barril-nivel {
     display: none !important;
   }
+  table{
+    border: 0px solid rgba(255, 255, 255, .8);
+  }
   td {
     border-left: 10px solid rgba(255, 255, 255, .8);
     border-image: url("../img/line.png") 14 !important;
