@@ -126,14 +126,25 @@
 
 
   <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-      var URL = "1W2Zzz7OFro4D4ynvqyG8RYV8UOgeJ0c7iaqW5hU8tAM"
-      Tabletop.init({
-        key: URL,
-        callback: showInfo,
-        simpleSheet: true
-      })
-    })
+   // document.addEventListener('DOMContentLoaded', function() {
+   //   var URL = "1W2Zzz7OFro4D4ynvqyG8RYV8UOgeJ0c7iaqW5hU8tAM"
+   //   Tabletop.init({
+   //     key: URL,
+   //     callback: showInfo,
+   //     simpleSheet: true
+   //   })
+   // })
+    
+    function init() {
+          Papa.parse('https://docs.google.com/spreadsheets/d/1W2Zzz7OFro4D4ynvqyG8RYV8UOgeJ0c7iaqW5hU8tAM', {
+          download: true,
+          header: true,
+          complete: function(results) {
+            var data = results.data
+            console.log(data)
+          }
+        })
+window.addEventListener('DOMContentLoaded', init)
 
     function showInfo(data) {
       var tableOptions = {
