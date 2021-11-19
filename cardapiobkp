@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Academia das Cervejas</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel="shortcut icon" href="/favicon.png">
+  <script type="text/javascript" src="js/ICanHaz.js"></script>
+  <script type="text/javascript" src='js/jquery.js'></script>
+  <script type="text/javascript" src='js/site.js'></script>
+  <script type="text/javascript" src='js/tabletop1.3.4.js'></script>
+  <link rel='stylesheet' type='text/css' href="estilos/styles.css">
+  <script src="https://use.fontawesome.com/ebef64dc49.js"></script>
+  <!-- metas -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="http://academiadascervejas.com.br/">
+  <meta property="og:title" content="Academia das Cervejas">
+  <meta property="og:site_name" content="Academia das Cervejas">
+  <meta property="og:description" content="Av. Sen. Souza Naves, 851 • Alto da Rua XV, Matriz CEP 80050-152 • Curitiba (PR) ">
+  <meta property="og:image" content="https://github.com/voltdatalab/academia-cervejas/blob/gh-pages/social.png?raw=true">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:type" content="website">
+  <meta name="description" content="Bar e Pub Academia das Cervejas, em Curitiba">
+  <meta name='subtitle' content='Bar e Pub Academia das Cervejas, em Curitiba'>
+  <meta name="author" content="@sergiospagnuolo">
+  <meta name="keywords" content="cerveja, cerveja artesanal, pub, bar, Curitiba">
+  <meta name='url' content='http://academiadascervejas.com.br/'>
+  <meta name='coverage' content='Brasil'>
+  <meta name='distribution' content='Global'>
+  <meta name='rating' content='General'>
+  <meta name='target' content='all'>
+  <meta name='HandheldFriendly' content='True'>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112333936-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112333936-1');
+</script>
+
+</head>
+
+
+<div class="container">
+  <header>
+    <ul class="menu">
+      <li style="color:#fff"><a href="https://www.facebook.com/academiadascervejas/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+      <li style="color:#fff"> <a href="https://www.instagram.com/academiadascervejas/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="index.html"><i class="fa fa-beer" aria-hidden="true"></i> Cervejas</a></li>
+      <li><a href="cardapio.html"><i class="fa fa-cutlery" aria-hidden="true"></i> Cardápio</a></li>
+      <li><a href="#mapa"><i class="fa fa-map-marker" aria-hidden="true"></i> Contato</a></li>
+      <li> <a href="parceiros.html"><i class="fa fa-users" aria-hidden="true"></i> Parceiros</a></li>
+    </ul>
+    <a href="index.html"><img src="img/logo_oficial.png" alt="logo" id="logo"></a>
+  </header>
+</div>
+
+<body>
+  <div id="tools" class="container"><span class="flash animated">Carregando cardápio...</span></div>
+  <div id="info" class="container"></div>
+
+  <div class="main_container">
+    <hr>
+    <p class="endereco"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Av. Sen. Souza Naves, 851 • Alto da Rua XV, Matriz
+      <p class="endereco">CEP 80050-152 • Curitiba (PR)</p> <br />
+      <p class="endereco"> <i class="fa fa-phone-square fa-lg" aria-hidden="true"></i> Tel: (41) 3155-6631</p><br />
+      <p class="endereco"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> <a href="mailto:academiadascervejas@gmail.com">academiadascervejas@gmail.com</a></p>
+
+      <div class="footer">
+        <div id="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14412.859715231087!2d-49.249178!3d-25.431077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb2970aba5e42c8e!2sAcademia+das+Cervejas!5e0!3m2!1spt-BR!2sbr!4v1500255624182" height="500" frameborder="0"
+            style="border:0" allowfullscreen id="mapa" id="gmaps"></iframe>
+        </div>
+        <div id="fb-embed">
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Facademiadascervejas%2F&tabs=timeline&width=360&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1085014414958426"
+            width="360" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        </div>
+      </div>
+  </div>
+
+  <script id="tools" type="text/html">
+    {{#rows}}
+    <div id="{{rowNumber}}">
+      <div class="parceiros">
+        <h2 class="nome-parceiro">{{tipo}} <br class="breaker" /><span class="preco-rango">R$ {{valor}}</span></h2>
+        <div class="imgrango">
+          <img src="{{imagem}}" style="margin-left:-10px;" />
+        </div>
+        <h3 class="desc-rango"> {{descricao}} </h3>
+        <ul class="harmonia">
+          <li style="color:#fff"> Vai bem com: </li>
+          <li> {{harmoniza1}}</li>
+          <li> {{harmoniza2}}</li>
+          <li> {{harmoniza3}}</li>
+        </ul>
+        <br />
+      </div>
+    </div>
+    {{/rows}}
+  </script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var URL = "1QVQ9JdVH23HExsCjxYJHT96OrdTVR_ewDFROjDhogWA"
+      Tabletop.init({
+        key: URL,
+        callback: initialize,
+        simpleSheet: true
+      })
+    })
+  </script>
+</body>
+
+</html>
